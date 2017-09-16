@@ -9,6 +9,6 @@ public interface IEmployeeService {
 	public String addEmployee(Employee employee);
 	public Employee findByEmployeeId(String employeeId);
 	public List<Employee> findByName(String name);
-	public String modifyDishConnection(Employee employee);
+	public String modifyEmployee(Employee employee);
 
 }

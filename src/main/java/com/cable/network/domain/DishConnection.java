@@ -8,7 +8,7 @@ public class DishConnection {
 	@Id
 	private String connectionId;
 	private String name;
-	private String mobileNo;
+	private String mobile;
 	private String address;
 	private String email;
 	private String connectionType;
@@ -29,10 +29,10 @@ public class DishConnection {
 		this.name = name;
 	}
 	public String getMobileNo() {
-		return mobileNo;
+		return mobile;
 	}
 	public void setMobileNo(String mobileNo) {
-		this.mobileNo = mobileNo;
+		this.mobile = mobileNo;
 	}
 	public String getAddress() {
 		return address;
@@ -72,7 +72,7 @@ public class DishConnection {
 	}
 	@Override
 	public String toString() {
-		return "DishConnection [connectionId=" + connectionId + ", name=" + name + ", mobileNo=" + mobileNo
+		return "DishConnection [connectionId=" + connectionId + ", name=" + name + ", mobileNo=" + mobile
 				+ ", address=" + address + ", email=" + email + ", connectionType=" + connectionType
 				+ ", territoryDetail=" + territoryDetail + ", status=" + status + ", balance=" + balance + "]";
 	}

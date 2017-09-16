@@ -10,33 +10,34 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.cable.network.domain.Employee;
-import com.cable.network.iservice.IEmployeeService;
+import com.cable.network.domain.DishConnection;
+import com.cable.network.iservice.IDishConnectionService;
 
 @RestController
 public class ConnectionController {
 	
 	@Autowired
-	private IEmployeeService employeeService;
+	private IDishConnectionService dishConnectionService;
 	
-	@RequestMapping(value = "/dish/add-employee",method = RequestMethod.POST)
-	public String addConnection(@RequestBody Employee employee) {
-		return employeeService.addEmployee(employee);
+	@RequestMapping(value = "/dish/add-connection",method = RequestMethod.POST)
+	public String addConnection(@RequestBody DishConnection dishConnection) {
+		System.out.println("===================I am called===========");
+		return dishConnectionService.addConnection(dishConnection);
 	}
 	
-	@RequestMapping(value = "/dish/get-employee",method = RequestMethod.POST)
-	public Employee getEmployee(@RequestParam String employeeId) {
-		return employeeService.findByEmployeeId(employeeId);
+	@RequestMapping(value = "/dish/get-connection",method = RequestMethod.POST)
+	public DishConnection getDishConnection(@RequestParam String connectionId) {
+		return dishConnectionService.findByConnectionId(connectionId);
 		
 	}
 	
-	@RequestMapping(value = "/dish/get-employee/{name}",method = RequestMethod.POST)	
-	public List<Employee> getEmployeeByName(@PathVariable("name") String name) {
-		return employeeService.findByName(name);
+	@RequestMapping(value = "/dish/get-connection/{name}",method = RequestMethod.POST)	
+	public List<DishConnection> getDishConnectionByName(@PathVariable("name") String name) {
+		return dishConnectionService.findByName(name);
 	}
 	
-	@RequestMapping(value = "/dish/modify-employee",method = RequestMethod.PUT)
-	public String modifyEmployee(@RequestBody Employee employee) {
-		return employeeService.modifyDishConnection(employee);
+	@RequestMapping(value = "/dish/modify-connection",method = RequestMethod.PUT)
+	public String modifyDishConnection(@RequestBody DishConnection dishConnection) {
+		return dishConnectionService.modifyDishConnection(dishConnection);
 	}
 }

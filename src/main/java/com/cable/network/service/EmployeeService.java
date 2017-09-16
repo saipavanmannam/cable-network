@@ -42,7 +42,7 @@ public class EmployeeService implements IEmployeeService {
 	}
 
 	@Override
-	public String modifyDishConnection(Employee employee) {
+	public String modifyEmployee(Employee employee) {
 		return employeeRepo.save(employee)!=null ? "SUCESS" : "FAIL";
 	}
 
