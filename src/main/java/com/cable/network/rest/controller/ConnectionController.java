@@ -21,11 +21,10 @@ public class ConnectionController {
 	
 	@RequestMapping(value = "/dish/add-connection",method = RequestMethod.POST)
 	public String addConnection(@RequestBody DishConnection dishConnection) {
-		System.out.println("===================I am called===========");
 		return dishConnectionService.addConnection(dishConnection);
 	}
 	
-	@RequestMapping(value = "/dish/get-connection",method = RequestMethod.POST)
+	@RequestMapping(value = "/dish/get-connection",method = RequestMethod.GET)
 	public DishConnection getDishConnection(@RequestParam String connectionId) {
 		return dishConnectionService.findByConnectionId(connectionId);
 		
@@ -40,4 +39,6 @@ public class ConnectionController {
 	public String modifyDishConnection(@RequestBody DishConnection dishConnection) {
 		return dishConnectionService.modifyDishConnection(dishConnection);
 	}
+	
+	
 }
