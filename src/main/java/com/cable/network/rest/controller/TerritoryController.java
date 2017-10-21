@@ -1,5 +1,7 @@
 package com.cable.network.rest.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,5 +32,11 @@ public class TerritoryController {
 	@RequestMapping(value = "/dish/modify-territory",method = RequestMethod.PUT)
 	public String modifyTerritory(@RequestBody TerritoryDetail territoryDetail) {
 		return territoryService.modifyTerritoryDetail(territoryDetail);
+	}
+	
+	@RequestMapping(value = "/dish/get-all-territories",method = RequestMethod.GET)
+	public List<TerritoryDetail> getAllTerritories() {
+		return territoryService.findAllTerritories();
+		
 	}
 }

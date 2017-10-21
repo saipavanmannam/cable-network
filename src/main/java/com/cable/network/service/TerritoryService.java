@@ -1,5 +1,7 @@
 package com.cable.network.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -30,6 +32,11 @@ public class TerritoryService implements ITerritoryService {
 	@Override
 	public String modifyTerritoryDetail(TerritoryDetail territoryDetail) {
 		return addTerritoryDetail(territoryDetail);
+	}
+
+	@Override
+	public List<TerritoryDetail> findAllTerritories() {
+		return territoryRepo.findAll();
 	}
 
 }

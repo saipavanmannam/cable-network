@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class AuthController {
 	
-	@RequestMapping({"/","/connection"})
+	@RequestMapping({"/*"})
 	public String modifyDishConnection() {	
 		return "forward:/index.html";
 	}
