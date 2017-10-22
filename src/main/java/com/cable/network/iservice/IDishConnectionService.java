@@ -9,4 +9,5 @@ public interface IDishConnectionService {
 	public DishConnection findByConnectionId(String connectionId);
 	public List<DishConnection> findByName(String name);
 	public String modifyDishConnection(DishConnection dishConnection);
+	public List<DishConnection> findAllConnections();
 }

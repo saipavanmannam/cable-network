@@ -43,4 +43,9 @@ public class DishConnectionService implements IDishConnectionService{
 			return "FAIL";
 	}
 
+	@Override
+	public List<DishConnection> findAllConnections() {
+		return dishConnectionRepo.findAll();
+	}
+
 }

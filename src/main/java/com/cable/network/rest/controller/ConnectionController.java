@@ -40,5 +40,10 @@ public class ConnectionController {
 		return dishConnectionService.modifyDishConnection(dishConnection);
 	}
 	
+	@RequestMapping(value = "/dish/get-all-connections",method = RequestMethod.GET)
+	public List<DishConnection> getAllDishConnections() {
+		return dishConnectionService.findAllConnections();
+		
+	}
 	
 }

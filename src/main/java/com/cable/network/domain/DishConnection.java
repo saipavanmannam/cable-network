@@ -28,11 +28,11 @@ public class DishConnection {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getMobileNo() {
+	public String getMobile() {
 		return mobile;
 	}
-	public void setMobileNo(String mobileNo) {
-		this.mobile = mobileNo;
+	public void setMobile(String mobile) {
+		this.mobile = mobile;
 	}
 	public String getAddress() {
 		return address;
@@ -72,7 +72,7 @@ public class DishConnection {
 	}
 	@Override
 	public String toString() {
-		return "DishConnection [connectionId=" + connectionId + ", name=" + name + ", mobileNo=" + mobile
+		return "DishConnection [connectionId=" + connectionId + ", name=" + name + ", mobile=" + mobile
 				+ ", address=" + address + ", email=" + email + ", connectionType=" + connectionType
 				+ ", territoryDetail=" + territoryDetail + ", status=" + status + ", balance=" + balance + "]";
 	}
